@@ -2,5 +2,15 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+solc = "0.8.25"
+fs_permissions = [{ access = "write", path = "./" }]
+[rpc_endpoints]
+goerli = "${GOERLI_RPC_URL}"
+local = "HTTP://127.0.0.1:7545"
+amoy = "${AMOY_RPC_URL}"
+[etherscan]
+goerli = { key = "${ETHERSCAN_API_KEY}" }
+amoy = { key = "${AMOY_API_KEY}" }
+[profile.local]
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
